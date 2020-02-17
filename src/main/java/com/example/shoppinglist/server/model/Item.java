@@ -1,4 +1,4 @@
-package com.example.shoppinglist.model;
+package com.example.shoppinglist.server.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

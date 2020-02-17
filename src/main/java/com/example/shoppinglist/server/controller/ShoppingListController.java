@@ -1,7 +1,7 @@
-package com.example.shoppinglist.controller;
+package com.example.shoppinglist.server.controller;
 
-import com.example.shoppinglist.dao.ItemDAO;
-import com.example.shoppinglist.model.Item;
+import com.example.shoppinglist.server.dao.ItemDAO;
+import com.example.shoppinglist.server.model.Item;
 import com.sun.istack.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/list")
+@RequestMapping("/")
 public class ShoppingListController
 {
     @Autowired

@@ -1,4 +1,4 @@
-package com.example.shoppinglist;
+package com.example.shoppinglist.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
