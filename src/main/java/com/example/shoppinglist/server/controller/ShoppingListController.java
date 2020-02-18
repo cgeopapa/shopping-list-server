@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@CrossOrigin("http://localhost:4200")
 public class ShoppingListController
 {
     @Autowired
