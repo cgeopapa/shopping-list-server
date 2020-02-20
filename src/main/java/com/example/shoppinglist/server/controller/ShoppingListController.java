@@ -10,7 +10,6 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:4200")
 public class ShoppingListController
 {
     @Autowired
@@ -26,5 +25,17 @@ public class ShoppingListController
     public Item save(@Valid @NotNull @RequestBody Item item)
     {
         return itemDAO.save(item);
+    }
+    
+    @PutMapping
+    public Item update(@Valid @NotNull @RequestBody Item item)
+    {
+        return itemDAO.save(item);
+    }
+
+    @DeleteMapping
+    public void delete(@Valid @NotNull @RequestBody Item item)
+    {
+        itemDAO.deleteById(item.getId());
     }
 }
