@@ -4,6 +4,7 @@ import com.example.shoppinglist.server.dao.ItemDAO;
 import com.example.shoppinglist.server.model.Item;
 import com.sun.istack.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -21,7 +22,7 @@ public class ShoppingListController
         return itemDAO.findAll();
     }
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public Item save(@Valid @NotNull @RequestBody Item item)
     {
         return itemDAO.save(item);
