@@ -22,7 +22,7 @@ public class ShoppingListController
         return itemDAO.findAll();
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public Item save(@Valid @NotNull @RequestBody Item item)
     {
         return itemDAO.save(item);
