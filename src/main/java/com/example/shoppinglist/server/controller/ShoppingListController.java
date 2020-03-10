@@ -29,14 +29,20 @@ public class ShoppingListController
     }
     
     @PutMapping
-    public Item update(@Valid @NotNull @RequestBody Item item)
+    public void update(@Valid @NotNull @RequestBody List<Item> items)
     {
-        return itemDAO.save(item);
+        for (Item item: items)
+        {
+            itemDAO.save(item);
+        }
     }
 
     @DeleteMapping
-    public void delete(@Valid @NotNull @RequestBody Item item)
+    public void delete(@Valid @NotNull @RequestBody List<Item> items)
     {
-        itemDAO.deleteById(item.getId());
+        for (Item item: items)
+        {
+            itemDAO.deleteById(item.getId());
+        }
     }
 }
